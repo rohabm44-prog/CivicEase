@@ -1,0 +1,6 @@
+{
+  "name": "CivicEase - Cognitive Accessibility Welfare Portal",
+  "description": "Smart adaptation engine and accessibility portal for neurodivergent citizens, seniors, and individuals with cognitive processing differences in Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

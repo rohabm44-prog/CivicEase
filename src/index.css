@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --surface-primary: #ffffff;
+    --surface-secondary: #f1f5f9;
+    --border-color: #e2e8f0;
+    --accent-color: #059669;
+    --accent-hover: #047857;
+    --accent-text: #ffffff;
+    --warning-bg: #fffbeb;
+    --warning-border: #fef3c7;
+    --warning-text: #b45309;
+    --badge-bg: #ecfdf5;
+    --badge-text: #065f46;
+  }
+
+  /* High Contrast Dark Theme (Yellow on Black - Gold Standard for Low Vision & Cognitive Clarity) */
+  [data-theme="high-contrast-dark"] {
+    --bg-primary: #000000;
+    --text-primary: #ffff00;
+    --text-secondary: #fffa65;
+    --surface-primary: #0a0a0a;
+    --surface-secondary: #141414;
+    --border-color: #ffff00;
+    --accent-color: #ffff00;
+    --accent-hover: #ffffff;
+    --accent-text: #000000;
+    --warning-bg: #1a1500;
+    --warning-border: #ffff00;
+    --warning-text: #ffff00;
+    --badge-bg: #141414;
+    --badge-text: #00ffff;
+  }
+
+  /* Soft Glare-Free Paper Theme (Photophobia & Sensory Sensitivity) */
+  [data-theme="glare-free"] {
+    --bg-primary: #f5eedb;
+    --text-primary: #2b2118;
+    --text-secondary: #574637;
+    --surface-primary: #ece3cc;
+    --surface-secondary: #e2d7bd;
+    --border-color: #c9bc9e;
+    --accent-color: #3b5f41;
+    --accent-hover: #29462e;
+    --accent-text: #f5eedb;
+    --warning-bg: #eae1c3;
+    --warning-border: #c4b591;
+    --warning-text: #5c3b1e;
+    --badge-bg: #e1dac1;
+    --badge-text: #2b2118;
+  }
+
+  /* High Contrast Stark Light (Monochrome Crisp) */
+  [data-theme="high-contrast-light"] {
+    --bg-primary: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #1a1a1a;
+    --surface-primary: #ffffff;
+    --surface-secondary: #f0f0f0;
+    --border-color: #000000;
+    --accent-color: #000000;
+    --accent-hover: #222222;
+    --accent-text: #ffffff;
+    --warning-bg: #f9f9f9;
+    --warning-border: #000000;
+    --warning-text: #000000;
+    --badge-bg: #000000;
+    --badge-text: #ffffff;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Typography Modes */
+.font-dyslexic {
+  font-family: 'Lexend', system-ui, -apple-system, sans-serif !important;
+  letter-spacing: 0.04em !important;
+  word-spacing: 0.12em !important;
+  line-height: 1.7 !important;
+}
+
+.font-urdu-clean {
+  font-family: 'Noto Sans Arabic', 'Noto Nastaliq Urdu', system-ui, sans-serif !important;
+}
+
+.font-nastaliq {
+  font-family: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', serif !important;
+  line-height: 2.2 !important;
+}
+
+/* Super Scaling Levels */
+.scale-normal {
+  font-size: 16px;
+}
+
+.scale-large {
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.scale-xlarge {
+  font-size: 23px;
+  line-height: 1.75;
+}
+
+/* Enlarged Touch Targets (52px minimum for seniors and motor tremor assistance) */
+.touch-enlarged button,
+.touch-enlarged input,
+.touch-enlarged a,
+.touch-enlarged [role="button"] {
+  min-height: 52px !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  font-size: 1.05em !important;
+}
+
+/* Focus Visible Enhancement */
+*:focus-visible {
+  outline: 3px solid #0284c7 !important;
+  outline-offset: 3px !important;
+}
+
+[data-theme="high-contrast-dark"] *:focus-visible {
+  outline: 3px solid #00ffff !important;
+  outline-offset: 3px !important;
+}
+
+/* Print Friendly */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
